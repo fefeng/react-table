@@ -25,6 +25,31 @@
     ├── webpack.config.js
 ## 代码分析
 *代码使用了es6的新特性，以及react基础知识请自行了解学习*
-
-    webpack.config.js
+####webpack.config.js
+    
+    var webpack = require('webpack');
+    module.exports = {
+        entry: [
+          'webpack/hot/dev-server',
+          './app/app.js'
+        ],
+        output: {
+            path: './build',
+            filename: "bundle.js"
+        },
+        module: {
+            loaders: [
+                { test: /\.js?$/,  loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
+                { test: /\.js$/,   loader: 'babel-loader',exclude: /node_modules/},
+                { test: /\.css$/,  loader: "style!css" },
+                { test: /\.scss$/, loader: 'style!css!sass'},
+            ]
+        },
+        resolve:{
+            extensions:['','.js','.json']
+        },
+        plugins: [
+            new webpack.NoErrorsPlugin()
+        ]
+    };
     
