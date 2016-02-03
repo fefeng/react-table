@@ -1,4 +1,5 @@
 let common = {
+    //  生成UUID
     uuid (){
         var s = [];
         var hexDigits = "0123456789abcdef";

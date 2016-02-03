@@ -2,40 +2,36 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import React_table_App from '../containers/react_table/App';
-import reactTableApp from '../containers/react_table/reducers';
+import React_table_App from '../containers/App';
+import reactTableApp from '../containers/reducers';
 import common from './common';
 
-let data= [];
-let platform = ['腾讯云','阿里云','亚马逊云','华为','58同城'];
-let account = ['ubunut','root','admin','Administrator','sa'];
 
+//	 随机生成数据用以渲染表格
+let data= [];
+let account = ['ubunut','root','admin','Administrator','sa'];
 for (let i = 1; i <= 100; i++) {
 	data.push({
 		id:i,
-		platform:platform[Math.floor(Math.random()*5)],
+		ip:"200.210.33."+Math.floor(Math.random()*255),
 		hostName:'HostName'+i,
 		os:'ubunut',
 		account:account[Math.floor(Math.random()*5)],
-		password:common.uuid().substring(0,10),
+		macAddress:common.uuid().substring(0,16),
 		port:Math.floor(Math.random()*100),
 	})
 };
 
+//	 Redux 应用只有一个单一的 store
 let store = createStore(reactTableApp);
-let rootElement = document.getElementById('root')
+
 render(
   <Provider store={store}>
-    <React_table_App data={data} platform={platform}/>
+   	<React_table_App data={data}/>
   </Provider>,
-  rootElement
+  document.getElementById('root')
 )
 
-console.log(store.getState());
 let unsubscribe = store.subscribe(() =>
-  console.log("",store.getState())
+	console.log("dispatch:",store.getState())
 );
-
-document.getElementById('gotoTop').addEventListener('click',function(e){
-	window.scrollTo(10,10); 	
-});

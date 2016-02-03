@@ -1,37 +1,37 @@
 {
   "name": "react-table",
   "version": "1.0.0",
-  "description": "react-table",
-  "main": "index.js",
+  "description": "first",
+  "main": "",
+  "dependencies": {
+    "babel-loader": "^5.4.0",
+    "babel-core": "^5.8.35",
+    "css-loader": "^0.12.1",
+    "lodash": "^3.10.1",
+    "react": "^0.14.7",
+    "react-redux": "^4.2.1",
+    "react-dom": "^0.14.7",
+    "react-hot-loader": "^1.3.0",
+    "react-kendo": "^0.13.11",
+    "redux": "^3.2.1",
+    "react-router": "^0.13.5",
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1",
+    "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "webpack-dev-server --hot --progress --colors",
     "build": "webpack --progress --colors"
   },
   "repository": {
     "type": "git",
-    "url": ".."
+    "url": "git+https://github.com/fengzier/react.git"
   },
-  "keywords": [
-    "react",
-    "webpack"
-  ],
   "author": "fengzier",
-  "devDependencies": {
-    "babel-core": "^5.8.25",
-    "babel-loader": "^5.3.2",
-    "bootstrap": "^3.3.6",
-    "css-loader": "^0.12.1",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "react-hot-loader": "^1.3.0",
-    "react-redux": "^4.2.1",
-    "react-router": "^0.13.3",
-    "redux": "^3.2.1",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.11.0"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengzier/react/issues"
   },
-  "dependencies": {
-    "lodash": "~3.10.1",
-    "react-kendo": "~0.13.11"
-  }
+  "homepage": "https://github.com/fengzier/react#readme"
 }

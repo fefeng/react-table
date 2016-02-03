@@ -4,18 +4,19 @@
         <meta charset="utf-8">
         <title>React Table</title>
         <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="./css/app.css">
+        <style type="text/css">
+            #root{
+                margin-top:20px;
+            }
+            body{
+                overflow-y:scroll; 
+            }
+        </style>
     </head>
     <body>
         <div class="container">
-            <div id="example"></div>
             <div id="root"></div>            
-            <div id="gotoTop">
-                <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
-            </div>
-        </div>
-        <section id="react"></section>
-        <script src="bundle.js"></script>        
-            
+        </div>        
+        <script src="bundle.js"></script>
     </body>
 </html>
