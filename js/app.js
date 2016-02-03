@@ -1,3 +1,4 @@
+import './app.scss';
 import React from 'react';
 import { render } from 'react-dom';
 import { createStore } from 'redux';
@@ -5,7 +6,6 @@ import { Provider } from 'react-redux';
 import React_table_App from '../containers/App';
 import reactTableApp from '../containers/reducers';
 import common from './common';
-
 
 //	 随机生成数据用以渲染表格
 let data= [];

@@ -19,7 +19,11 @@
     "webpack-dev-server": "^1.14.1",
     "bootstrap": "^3.3.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.12.1",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0"
+  },
   "scripts": {
     "start": "webpack-dev-server --hot --progress --colors",
     "build": "webpack --progress --colors"
