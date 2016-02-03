@@ -1,12 +1,12 @@
 var webpack = require('webpack');
 module.exports = {
     entry: [
-      'webpack/hot/only-dev-server',
-      './app/app.js'
+      'webpack/hot/only-dev-server',    //改变文件立刻刷新，而且保存了现有的state
+      './app/app.js'                    //入口配置文件
     ],
     output: {
-        path: './build',
-        filename: "bundle.js"
+        path: './build',                
+        filename: "bundle.js"           //输出文件，即index.html需要引入的文件
     },
     module: {
         loaders: [
