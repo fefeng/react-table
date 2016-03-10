@@ -2,14 +2,12 @@
 
 ## 技术列表
 
-   | 名称 | 作用 |
-   |------|----|
-   | Webpack     | 即使编译工具  [webpack][4]|
-   | Babel       | 用于es6转es5语法|
-   | ECMAScript6 | 新版本的语法浏览器支持度不高。所以需要转换  [阮一峰 ECMAScript 6入门][2]|
-   | Sass        | 选用 |
-   | React       | 用于构建用户界面的JAVASCRIPT库  [react中文社区][3]|
-   | Redux       | 基于Flux理论的状态管理库 [Redux 中文文档][5] |
+   * Webpack      即使编译工具  [webpack][4]
+   * Babel        用于es6转es5语法
+   * ECMAScript6  新版本的语法浏览器支持度不高。所以需要转换  [阮一峰 ECMAScript 6入门][2]
+   * Sass         选用 
+   * React        用于构建用户界面的JAVASCRIPT库  [react中文社区][3]
+   * Redux        基于Flux理论的状态管理库 [Redux 中文文档][5] 
 
    [2]: http://es6.ruanyifeng.com/
    [3]: http://www.reactjs.cn/react/docs/getting-started.html
