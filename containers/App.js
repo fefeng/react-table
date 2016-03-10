@@ -6,7 +6,7 @@ import R_Toobar from '../components/R_toobar';
 
 class App extends Component{
 	render(){
-		const {dispatch,operation} = this.props;			
+		const {dispatch,operation} = this.props;		
 		return(
 			<div>
 				<R_Toobar				
@@ -20,7 +20,7 @@ class App extends Component{
 							dispatch(lengthMenu(text));
 						}
 					}
-					{...this.props}>					
+					{...this.props}>
 				</R_Toobar>
 				<R_Table operation={operation} {...this.props}></R_Table>
 			</div>					
@@ -32,4 +32,5 @@ function select(state){
 		operation: state.operation
 	};
 }
+
 export default connect(select)(App);

@@ -14,7 +14,7 @@ export default class R_Table extends Component{
                  <th>账户</th>
                  <th>内网IP</th>
                  <th>MAC</th>
-                 <th>端口号</th>
+                 <th>端口号</th>                 
              	</tr>                    
          	</thead>
 	      	<R_tbody {...this.props}/>	            

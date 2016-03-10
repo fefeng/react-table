@@ -1,0 +1,43 @@
+$width :150px;
+.rselect-container{
+	position: relative;
+	width:$width;
+	.searchInput{
+		width: $width;
+		border-radius:0px;
+		padding-right: 30px;
+	}
+	.search-icon{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		color: #ccc;
+	}
+	.none{
+		display: none;
+	}
+	ul{
+		border: 1px solid #5BC0DE;
+		list-style-type: none;
+		cursor: pointer;
+		padding-left: 0px;	
+		position: absolute;
+		z-index: 99999;
+		background-color: white;
+		left: 0;
+		right: 0;
+		li{
+			padding: 5px 10px 5px 15px;
+			&:hover{
+				background-color: #5BC0DE;
+			}
+			-webkit-touch-callout: none; /* iOS Safari */
+			 -webkit-user-select: none;   /* Chrome/Safari/Opera */
+			 -khtml-user-select: none;    /* Konqueror */
+			 -moz-user-select: none;      /* Firefox */
+			 -ms-user-select: none;       /* IE/Edge */
+			 user-select: none;           
+		}
+	}
+}
+

@@ -1,9 +1,10 @@
 import React,{ Component } from 'react';
+import ReactSelect from './reactSelect/app';
 
 export default class R_Toobar extends Component{
 	constructor(props) {
-	   super(props);
-	   this.state = {platform: 'All'};	   	   
+	   //super(props);
+	   this.state = {platform: 'All'};
 	}
 	onLengthMenuChange(e){
 		let platform = e.target.value;
@@ -13,7 +14,14 @@ export default class R_Toobar extends Component{
 		let value = e.target.value;
 		this.props.onFilterChange(value.trim());
 	}
-	render(){		
+	render(){ 
+		const accountData = [
+			{id: "root" ,name: "root"},
+			{id: "admini" ,name: "admini"},
+			{id: "administrator" ,name: "administrator"},
+			{id: "ubuntu" ,name: "ubuntu"},
+			{id: "sa" ,name: "sa"},
+		]
 		return (
 			<div className="form-inline">
 				<div className="form-group">
@@ -26,13 +34,12 @@ export default class R_Toobar extends Component{
 						}
 					</select>
 				</div>
-				
+
 				<div className="form-group">
 					<label>过滤：</label>
-					<input type="text" className="form-control" placeholder="请输入过滤关键词" onChange={e => this.onFilterChange(e)}/>
-				</div>			
+					<input type="text" className="form-control" placeholder="请输入过滤关键词" onChange = {e => this.onFilterChange(e)}/>
+				</div>
 			</div>
-		)
-		
+		)		
 	}
 }

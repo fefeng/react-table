@@ -1,7 +1,9 @@
+import style from './index.css';
 import React,{ Component } from 'react';
 
 export default class R_tbody extends Component{	 
 	render () {
+		console.log(style);
 		let operation = this.props.operation,
 			len = 5,
 			filterWord= null,
