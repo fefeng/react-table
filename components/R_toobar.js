@@ -3,7 +3,7 @@ import ReactSelect from './reactSelect/app';
 
 export default class R_Toobar extends Component{
 	constructor(props) {
-	   //super(props);
+	   super(props);
 	   this.state = {platform: 'All'};
 	}
 	onLengthMenuChange(e){
@@ -14,7 +14,7 @@ export default class R_Toobar extends Component{
 		let value = e.target.value;
 		this.props.onFilterChange(value.trim());
 	}
-	render(){ 
+	render(){
 		const accountData = [
 			{id: "root" ,name: "root"},
 			{id: "admini" ,name: "admini"},
@@ -40,6 +40,6 @@ export default class R_Toobar extends Component{
 					<input type="text" className="form-control" placeholder="请输入过滤关键词" onChange = {e => this.onFilterChange(e)}/>
 				</div>
 			</div>
-		)		
+		)
 	}
 }
